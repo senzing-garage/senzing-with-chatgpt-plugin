@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Senzing Entity Resolution",
+    "name_for_model": "Senzing_Entity_Resolution",
+    "description_for_human": "Senzing Conversational AI for Entity Resolution plugin.",
+    "description_for_model": "Senzing Conversational AI for Entity Resolution plugin.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8080/.well-known/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://senzing.com/wp-content/uploads/SENZING-logo.jpg",
+    "contact_email": "support@senzing.com",
+    "legal_info_url": "https://senzing.com/terms-of-use/"
+}
