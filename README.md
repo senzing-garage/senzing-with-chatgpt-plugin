@@ -2,6 +2,8 @@
 
 A demo of Senzing Conversational AI for Entity Resolution announced in this [blog post](https://senzing.com/first-conversational-ai-for-entity-resolution/)!
 
+https://github.com/Senzing/senzing-with-chatgpt-demo/assets/23748/af382f96-8657-4640-ac44-0fdcaacabe12
+
 ## Features
 
 - Show examples of entities with either matches, possible matches, or relationships.
