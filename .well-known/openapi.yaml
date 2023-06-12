@@ -1,0 +1,215 @@
+components:
+  schemas:
+    ExportFlags:
+      description: An enumeration.
+      enum:
+      - MATCHED
+      - POSSIBLE_MATCHES
+      - POSSIBLE_RELATIONSHIPS
+      title: ExportFlags
+      type: string
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    SearchAttributes:
+      properties:
+        ADDR_CITY:
+          title: Addr City
+          type: string
+        ADDR_COUNTRY:
+          title: Addr Country
+          type: string
+        ADDR_FULL:
+          title: Addr Full
+          type: string
+        ADDR_LINE1:
+          title: Addr Line1
+          type: string
+        ADDR_POSTAL_CODE:
+          title: Addr Postal Code
+          type: string
+        ADDR_STATE:
+          title: Addr State
+          type: string
+        DATE_OF_BIRTH:
+          title: Date Of Birth
+          type: string
+        DRIVERS_LICENSE_NUMBER:
+          title: Drivers License Number
+          type: string
+        EMAIL_ADDRESS:
+          title: Email Address
+          type: string
+        NAME_FIRST:
+          title: Name First
+          type: string
+        NAME_FULL:
+          title: Name Full
+          type: string
+        NAME_LAST:
+          title: Name Last
+          type: string
+        NAME_MIDDLE:
+          title: Name Middle
+          type: string
+        NAME_ORG:
+          title: Name Org
+          type: string
+        NAME_SUFFIX:
+          title: Name Suffix
+          type: string
+        NATIONAL_ID_NUMBER:
+          title: National Id Number
+          type: string
+        PASSPORT_COUNTRY:
+          title: Passport Country
+          type: string
+        PASSPORT_NUMBER:
+          title: Passport Number
+          type: string
+        PHONE_NUMBER:
+          title: Phone Number
+          type: string
+        SSN_NUMBER:
+          title: Ssn Number
+          type: string
+      title: SearchAttributes
+      type: object
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+info:
+  description: Senzing Conversational AI for Entity Resolution plugin that allows
+    you to interact with entity resolution via natural language.
+  title: Senzing Entity Resolution Plugin
+  version: 1.0.1
+openapi: 3.0.2
+paths:
+  /entity_details:
+    get:
+      description: Retrieve entity data based on the ID of a resolved identity.
+      operationId: entity_details_entity_details_get
+      parameters:
+      - in: query
+        name: entity_id
+        required: true
+        schema:
+          title: Entity Id
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                title: Response Entity Details Entity Details Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Entity Details
+  /entity_how:
+    get:
+      description: Determines and details steps-by-step how records resolved to an
+        ENTITY_ID.
+      operationId: entity_how_entity_how_get
+      parameters:
+      - in: query
+        name: entity_id
+        required: true
+        schema:
+          title: Entity Id
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                title: Response Entity How Entity How Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Entity How
+  /entity_report:
+    get:
+      description: Return 10 entities with either matches, possible matches, or relationships.
+      operationId: entity_report_entity_report_get
+      parameters:
+      - in: query
+        name: export_flags
+        required: true
+        schema:
+          $ref: '#/components/schemas/ExportFlags'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {}
+                title: Response Entity Report Entity Report Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Entity Report
+  /search:
+    post:
+      description: Retrieves entity data based on a user-specified set of entity attributes.
+      operationId: search_attrs_search_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchAttributes'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                title: Response Search Attrs Search Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Search Attrs

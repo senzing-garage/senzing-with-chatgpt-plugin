@@ -1,0 +1,17 @@
+{
+  "name": "Senzing Entity Resolution Plugin",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+
+  "postCreateCommand": "poetry install",
+
+  "runArgs": [
+    "--network=host",
+    "--env-file", ".devcontainer/devcontainer.env"
+  ]
+}
