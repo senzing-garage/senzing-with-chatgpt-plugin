@@ -58,8 +58,8 @@ def test_entity_how(client):
 # Search Attrs
 #
 # https://docs.senzing.com/python/3/g2engine/searching/index.html#searchbyattributes
-def test_search(client):
-    resp = client.post('/search', json=dict(NAME_FULL='Bob Smith'))
+def test_entity_search(client):
+    resp = client.post('/entity_search', json=dict(NAME_FULL='Bob Smith'))
     assert 200 == resp.status_code
     assert resp.json() == SEARCH_NAME_FULL_BOB_SMITH
 

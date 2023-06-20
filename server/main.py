@@ -143,8 +143,8 @@ def entity_how(
 # Search Attrs
 #
 # https://docs.senzing.com/python/3/g2engine/searching/index.html#searchbyattributes
-@app.post('/search')
-def search(
+@app.post('/entity_search')
+def entity_search(
     attrs: SearchAttributes,
     api: Annotated[SenzingAPI, Depends(api_create)],
 ) -> dict:
