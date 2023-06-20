@@ -188,10 +188,10 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Entity Report
-  /search:
+  /entity_search:
     post:
       description: Retrieves entity data based on a user-specified set of entity attributes.
-      operationId: search_attrs_search_post
+      operationId: entity_search_entity_search_post
       requestBody:
         content:
           application/json:
@@ -203,7 +203,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Response Search Attrs Search Post
+                title: Response Entity Search Entity Search Post
                 type: object
           description: Successful Response
         '422':
@@ -212,4 +212,4 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
-      summary: Search Attrs
+      summary: Entity Search

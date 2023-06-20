@@ -11,7 +11,7 @@ run:
 test:
 	pytest --cov server --cov-report term-missing -v -s tests
 test-watch:
-	ptw -- --testmon
+	ptw tests -- --testmon
 
 openapi-schema:
 	python server/openapi_schema.py
