@@ -1,1 +1,1 @@
-# senzing-with-chatgpt-demo errors
+# senzing-with-chatgpt-plugin errors

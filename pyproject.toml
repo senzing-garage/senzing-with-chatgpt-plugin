@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "senzing-with-chatgpt-demo"
+name = "senzing-with-chatgpt-plugin"
 version = "1.0.0"
 description = "ChatGPT Plugin to use Senzing to perform entity resolution."
 authors = ["Kelvin Kakugawa <kakugawa@gmail.com>"]
