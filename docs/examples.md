@@ -1,1 +1,1 @@
-# senzing-with-chatgpt-demo examples
+# senzing-with-chatgpt-plugin examples

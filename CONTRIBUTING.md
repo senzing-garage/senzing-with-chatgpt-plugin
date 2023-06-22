@@ -83,7 +83,7 @@ The variables are used throughout the installation procedure.
 
 ```console
 export GIT_ACCOUNT=senzing
-export GIT_REPOSITORY=senzing-with-chatgpt-demo
+export GIT_REPOSITORY=senzing-with-chatgpt-plugin
 ```
 
 Synthesize environment variables.

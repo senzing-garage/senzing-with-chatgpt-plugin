@@ -1,1 +1,1 @@
-# senzing-with-chatgpt-demo development
+# senzing-with-chatgpt-plugin development
