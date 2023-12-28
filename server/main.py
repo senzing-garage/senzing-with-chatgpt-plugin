@@ -43,7 +43,7 @@ EXPORT_FLAG_MAP = {
     ExportFlags.POSSIBLE_RELATIONSHIPS: senzing_api.EXPORT_FLAGS_POSSIBLE_RELSHIPS,
     }
 
-# https://github.com/Senzing/senzing-rest-api-specification/blob/main/senzing-rest-api.yaml#L283
+# https://github.com/senzing-garage/senzing-rest-api-specification/blob/main/senzing-rest-api.yaml#L283
 # https://raw.githubusercontent.com/Senzing/senzing-rest-api/master/senzing-rest-api.yaml
 class SearchAttributes(BaseModel):
     NAME_ORG: Optional[str]

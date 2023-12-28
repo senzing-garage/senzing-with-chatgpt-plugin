@@ -1,8 +1,22 @@
 # Senzing ChatGPT Plugin Demo
 
+If you are beginning your journey with
+[Senzing](https://senzing.com/),
+please start with
+[Senzing Quick Start guides](https://docs.senzing.com/quickstart/).
+
+You are in the
+[Senzing Garage](https://github.com/senzing-garage)
+where projects are "tinkered" on.
+Although this GitHub repository may help you understand an approach to using Senzing,
+it's not considered to be "production ready" and is not considered to be part of the Senzing product.
+Heck, it may not even be appropriate for your application of Senzing!
+
+## Synopsis
+
 A demo of Senzing Conversational AI for Entity Resolution announced in this [blog post](https://senzing.com/first-conversational-ai-for-entity-resolution/)!
 
-https://github.com/Senzing/senzing-with-chatgpt-plugin/assets/23748/af382f96-8657-4640-ac44-0fdcaacabe12
+https://github.com/senzing-garage/senzing-with-chatgpt-plugin/assets/23748/af382f96-8657-4640-ac44-0fdcaacabe12
 
 ## Features
 
@@ -26,7 +40,7 @@ https://github.com/Senzing/senzing-with-chatgpt-plugin/assets/23748/af382f96-865
 
 ## Data
 
-The included SQLite db is already preloaded with the [truth-sets data](https://github.com/Senzing/truth-sets).
+The included SQLite db is already preloaded with the [truth-sets data](https://github.com/senzing-garage/truth-sets).
 
 If you want to use your own data, you can either:
 - Follow the [Quickstart for Docker](https://senzing.zendesk.com/hc/en-us/articles/12938524464403-Quickstart-For-Docker) guide.
