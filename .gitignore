@@ -1,7 +1,12 @@
 .DS_Store
-.history
 
 # Tests
 .coverage
 .coverage.*
 .testmondata*
+
+# Visual Studio code
+.vscode/*
+!.vscode/cspell.json
+*.code-workspace
+.history
