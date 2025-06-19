@@ -11,7 +11,7 @@ python = "3.9.2" # senzing/senzingapi-tools
 fastapi = "^0.109.1"
 fastapi-utils = "^0.2.1"
 pydantic = "^1.10.13"
-urllib3 = "<=2.0" # poetry req't
+urllib3 = "<=2.5.0" # poetry req't
 uvicorn = {extras = ["standard"], version = "^0.21.1"}
 
 [tool.poetry.group.dev.dependencies]
